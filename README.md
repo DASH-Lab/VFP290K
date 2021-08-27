@@ -30,7 +30,7 @@ pip install -v -e .
 ### 2. Generate coco format annotation files
 To train models, you should generate coco format annotation files. 
 Move labels.txt file to VFP290K dataset folder.
-Execute make_anno_list_for_voc2coco.ipynb file. You should change values named <target_domain> and <task>.
+Execute make_anno_list_for_voc2coco.ipynb file. You should change values named target_domain and task.
 Then, run this command
 ```
 python voc2coco.py --ann_dir /media/data1/VFP290K/<target_domain>/<task> --ann_ids /media/data1/VFP290K/annotations/<target_domain>_<tast>.txt --labels /media/data1/VFP290K/labels.txt --output /media/data1/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
