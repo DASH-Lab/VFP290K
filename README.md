@@ -23,6 +23,19 @@ pip install -v -e .
 ```
 - 모델 구동 환경 설명
 
+## Preprocessing
+
+### 1. 실험 폴더로 split하는거 (재주님)
+디렉토리 구조 설명 & split 코드 설명
+### 2. Generate coco format annotation files
+To train models, you should generate coco format annotation files. 
+Move labels.txt file to VFP290K dataset folder.
+Execute make_anno_list_for_voc2coco.ipynb file. You should change values named <target_domain> and <task>.
+Then, run this command
+```
+python voc2coco.py --ann_dir /media/data1/VFP290K/<target_domain>/<task> --ann_ids /media/data1/VFP290K/annotations/<target_domain>_<tast>.txt --labels /media/data1/VFP290K/labels.txt --output /media/data1/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
+```
+
 ## Training & Evaluation
 
 ### 1. Benchmark
@@ -53,7 +66,7 @@ To train the model(s) based on experimenta setting to demonstrate the perfomance
 
 - Light conditions
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_benchmark.py 4 
 ```
 
 ```eval
