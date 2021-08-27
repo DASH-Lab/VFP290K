@@ -6,7 +6,8 @@ This repository is the official documentation & implementation of [VFP290K: A La
 
 ## Requirements
 
-Our pretrained models except YOLO are based on [MMdetection2](https://github.com/open-mmlab/mmdetection) detection framework.
+Our pretrained models except YOLO are based on [MMdetection2](https://github.com/open-mmlab/mmdetection) detection framework. You can donwload coco-pretrained models for the transfer learning.
+
 #### 1. Install mmcv-full
 ```setup
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
@@ -26,13 +27,25 @@ pip install -v -e .
 
 ### 1. Benchmark
 To train the model(s) in the paper, run this command:
-
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-```eval
-python eval.py --input-data <path_to_data> --alpha 10 --beta 20
-```
+- single gpu training
+    ```train
+    python tools/train.py <config> --gpu-ids <device> 
+    ```
+    <config> and <device> indicate path of the config file and gpu id, respectively. This example is for train faster R-CNN model on gpu 0.
+    ex) python tools/train.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py --gpu-ids 0
+    
+- multi gpu training
+    ```multi gpu training
+    bash ./tools/dist_train.sh <config> <num_gpu> 
+    ```
+    <num_gpu> is a number of gpus to use. This example is for train faster R-CNN model with 4 gpus.
+    ex) bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_street.py 4 
+- test
+    ```eval
+    python tools/test.py <config> <weight> --eval bbox --gpu-ids <device>
+    ```
+    <weight> is the path of the trained model weight.
+    ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_street.py work_dirs/faster_rcnn_r50_1x_street/latest.pth --eval bbox --gpu-ids 1
 
 ### 2. Experimental setting (Ablation study for various features)
 To train the model(s) based on experimenta setting to demonstrate the perfomance shift in the paper Table.4, run this command:
