@@ -31,20 +31,20 @@ To train the model(s) in the paper, run this command:
     ```train
     python tools/train.py <config> --gpu-ids <device> 
     ```
-    <config> and <device> indicate path of the config file and gpu id, respectively. This example is for train faster R-CNN model on gpu 0.
+    <config> and <device> indicate path of the config file and gpu id, respectively. This example is for train faster R-CNN model on gpu 0.\
     ex) python tools/train.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py --gpu-ids 0
     
 - multi gpu training
     ```multi gpu training
     bash ./tools/dist_train.sh <config> <num_gpu> 
     ```
-    <num_gpu> is a number of gpus to use. This example is for train faster R-CNN model with 4 gpus.
+    <num_gpu> is a number of gpus to use. This example is for train faster R-CNN model with 4 gpus.\
     ex) bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_street.py 4 
 - test
     ```eval
     python tools/test.py <config> <weight> --eval bbox --gpu-ids <device>
     ```
-    <weight> is the path of the trained model weight.
+    <weight> is the path of the trained model weight.\
     ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_street.py work_dirs/faster_rcnn_r50_1x_street/latest.pth --eval bbox --gpu-ids 1
 
 ### 2. Experimental setting (Ablation study for various features)
