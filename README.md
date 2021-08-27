@@ -35,6 +35,7 @@ Then, run this command
 ```
 python voc2coco.py --ann_dir /media/data1/VFP290K/<target_domain>/<task> --ann_ids /media/data1/VFP290K/annotations/<target_domain>_<tast>.txt --labels /media/data1/VFP290K/labels.txt --output /media/data1/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
 ```
+ex) python voc2coco.py --ann_dir /media/data1/nips-experiment/low/test --ann_ids /media/data1/nips-experiment/annotations/low_test.txt --labels /media/data1/nips-experiment/labels.txt --output /media/data1/nips-experiment/annotations/low_test.json --ext xml
 
 ## Training & Evaluation
 
