@@ -70,7 +70,61 @@ You can download pretrained models here:
 
 
 ## Results
-Our model achieves the following performance on  Background:
+Our model achieves the following performance on benchmark:
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">Method</th>
+    <th class="tg-c3ow" colspan="3">Two-Stage</th>
+    <th class="tg-c3ow" colspan="3">One-Stage</th>
+    <th class="tg-c3ow">Transformer<br>-based</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Model</td>
+    <td class="tg-c3ow">Faster R-CNN</td>
+    <td class="tg-c3ow">Cascade R-CNN</td>
+    <td class="tg-c3ow">DetectoRS</td>
+    <td class="tg-c3ow">RetinaNet</td>
+    <td class="tg-c3ow">YOLO3</td>
+    <td class="tg-c3ow">YOLO5</td>
+    <td class="tg-c3ow">DETR</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">mAP</td>
+    <td class="tg-c3ow">0.732</td>
+    <td class="tg-c3ow">0.751</td>
+    <td class="tg-c3ow">0.746</td>
+    <td class="tg-c3ow">0.750</td>
+    <td class="tg-c3ow">0.590</td>
+    <td class="tg-c3ow">0.741</td>
+    <td class="tg-c3ow">0.605</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">AP_50</td>
+    <td class="tg-c3ow">0.873</td>
+    <td class="tg-c3ow">0.874</td>
+    <td class="tg-c3ow">0.866</td>
+    <td class="tg-c3ow">0.910</td>
+    <td class="tg-c3ow">0.813</td>
+    <td class="tg-c3ow">0.838</td>
+    <td class="tg-c3ow">0.868</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">AP_75}</td>
+    <td class="tg-c3ow">0.799</td>
+    <td class="tg-c3ow">0.811</td>
+    <td class="tg-c3ow">0.797</td>
+    <td class="tg-c3ow">0.811</td>
+    <td class="tg-c3ow">0.670</td>
+    <td class="tg-c3ow">0.784</td>
+    <td class="tg-c3ow">0.687</td>
+  </tr>
+</tbody>
+</table>
+
+Our model achieves the following performance on Background:
 <table class="tg">
 <thead>
   <tr>
@@ -225,6 +279,7 @@ Our model achieves the following performance on light conditions and camera heig
   </tr>
 </tbody>
 </table>
+
 
 ## Contributing
 This repository is copyrighted under GPLv3 license 
