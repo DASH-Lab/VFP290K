@@ -71,14 +71,6 @@ You can download pretrained models here:
 
 ## Results
 Our model achieves the following performance on  Background:
-<!-- <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style> -->
 <table class="tg">
 <thead>
   <tr>
@@ -154,6 +146,82 @@ Our model achieves the following performance on  Background:
     <td class="tg-c3ow">0.675<br>0.743<br>0.727</td>
     <td class="tg-c3ow">0.802<br>0.848<br>0.836</td>
     <td class="tg-c3ow">0.606<br>0.707<br>0.679</td>
+  </tr>
+</tbody>
+</table>
+
+Our model achieves the following performance on light conditions and camera heights:
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">Backbone</th>
+    <th class="tg-c3ow">Training<br></th>
+    <th class="tg-c3ow">Day</th>
+    <th class="tg-c3ow">Night</th>
+    <th class="tg-c3ow">Day</th>
+    <th class="tg-c3ow">Night</th>
+    <th class="tg-c3ow">Low</th>
+    <th class="tg-c3ow">High</th>
+    <th class="tg-c3ow">Low</th>
+    <th class="tg-c3ow">High</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow">Test</td>
+    <td class="tg-c3ow" colspan="2">Day</td>
+    <td class="tg-c3ow" colspan="2">Night</td>
+    <td class="tg-c3ow" colspan="2">Low</td>
+    <td class="tg-c3ow" colspan="2">High</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Faster R-CNN</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.767<br>0.917<br>0.843</td>
+    <td class="tg-c3ow">0.632<br>0.826<br>0.808</td>
+    <td class="tg-c3ow">0.523<br>0.714<br>0.572</td>
+    <td class="tg-c3ow">0.559<br>0.783<br>0.609</td>
+    <td class="tg-c3ow">0.700<br>0.898<br>0.808</td>
+    <td class="tg-c3ow">0.573<br>0.760<br>0.669</td>
+    <td class="tg-c3ow">0.561<br>0.749<br>0.636</td>
+    <td class="tg-c3ow">0.729<br>0.896<br>0.817</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">RetinaNet</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.779<br>0.932<br>0.848</td>
+    <td class="tg-c3ow">0.667<br>0.856<br>0.741</td>
+    <td class="tg-c3ow">0.534<br>0.747<br>0.567</td>
+    <td class="tg-c3ow">0.566<br>0.785<br>0.620</td>
+    <td class="tg-c3ow">0.702<br>0.903<br>0.792</td>
+    <td class="tg-c3ow">0.610<br>0.818<br>0.695</td>
+    <td class="tg-c3ow">0.596<br>0.780<br>0.669</td>
+    <td class="tg-c3ow">0.739<br>0.909<br>0.817</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">YOLOv3</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.615<br>0.874<br>0.728</td>
+    <td class="tg-c3ow">0.432<br>0.630<br>0.490</td>
+    <td class="tg-c3ow">0.299<br>0.545<br>0.306</td>
+    <td class="tg-c3ow">0.415<br>0.635<br>0.451</td>
+    <td class="tg-c3ow">0.567<br>0.808<br>0.678</td>
+    <td class="tg-c3ow">0.375<br>0.606<br>0.414</td>
+    <td class="tg-c3ow">0.349<br>0.530<br>0.394</td>
+    <td class="tg-c3ow">0.563<br>0.800<br>0.653</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">YOLOv5</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.794<br>0.888<br>0.842</td>
+    <td class="tg-c3ow">0.343<br>0.447<br>0.384</td>
+    <td class="tg-c3ow">0.392<br>0.517<br>0.416</td>
+    <td class="tg-c3ow">0.414<br>0.561<br>0.442</td>
+    <td class="tg-c3ow">0.590<br>0.752<br>0.680</td>
+    <td class="tg-c3ow">0.412<br>0.542<br>0.465</td>
+    <td class="tg-c3ow">0.350<br>0.448<br>0.394</td>
+    <td class="tg-c3ow">0.718<br>0.843<br>0.781</td>
   </tr>
 </tbody>
 </table>
