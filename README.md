@@ -26,7 +26,7 @@ pip install -v -e .
 ## Training & Evaluation
 
 ### 1. Benchmark
-To train the model(s) in the paper, run this command:
+To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
     ```train
     python tools/train.py <config> --gpu-ids <device> 
@@ -39,13 +39,14 @@ To train the model(s) in the paper, run this command:
     bash ./tools/dist_train.sh <config> <num_gpu> 
     ```
     <num_gpu> is a number of gpus to use. This example is for train faster R-CNN model with 4 gpus.\
-    ex) bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_street.py 4 
+    ex) bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_benchmark.py 4 
 - test
+   After train the model, you can evaluate the result. 
     ```eval
     python tools/test.py <config> <weight> --eval bbox --gpu-ids <device>
     ```
     <weight> is the path of the trained model weight.\
-    ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_street.py work_dirs/faster_rcnn_r50_1x_street/latest.pth --eval bbox --gpu-ids 1
+    ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py work_dirs/faster_rcnn_r50_1x_benchmark/latest.pth --eval bbox --gpu-ids 1
 
 ### 2. Experimental setting (Ablation study for various features)
 To train the model(s) based on experimenta setting to demonstrate the perfomance shift in the paper Table.4, run this command:
