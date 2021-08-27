@@ -73,7 +73,7 @@ You can download pretrained models here:
 Our model achieves the following performance on  Background:
 |   Backbone   |    Training    |     Street     |      Park      |    Building    |     Street     |      Park      |    Building    |     Street     |      Park      |    Building    |
 |:------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
-|              |      Test      |     Street     |                |                |      Park      |                |                |    Building    |                |                |
+|              |      Test      |     Street                                     |      Park      |                |                |    Building    |                |                |
 | Faster R-CNN |       mAP      |      0.742     |      0.732     |      0.616     |      0.620     |      0.706     |      0.517     |      0.748     |      0.847     |      0.702     |
 |              | AP_50 \| AP_75 | 0.910 \| 0.829 | 0.860 \| 0.809 | 0.828 \| 0.723 | 0.786 \| 0.690 | 0.857 \| 0.768 | 0.705 \| 0.588 | 0.876 \| 0.813 | 0.957 \| 0.920 | 0.821 \| 0.791 |
 |   RetinaNet  |       mAP      |      0.770     |      0.743     |      0.654     |      0.664     |      0.737     |      0.587     |      0.828     |      0.851     |      0.804     |
