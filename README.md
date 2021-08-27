@@ -99,123 +99,64 @@ Our model achieves the following performance on  Background:
   <tr>
     <td class="tg-c3ow"></td>
     <td class="tg-c3ow">Test</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">Street</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">Park</td>
-    <td class="tg-c3ow">Park</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">Building</td>
-    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow" colspan="3">Street </td>
+    <td class="tg-c3ow" colspan="3">Park</td>
+    <td class="tg-c3ow" colspan="3">Building </td>
   </tr>
   <tr>
     <td class="tg-c3ow">Faster R-CNN</td>
-    <td class="tg-c3ow">mAP</td>
-    <td class="tg-c3ow">0.742</td>
-    <td class="tg-c3ow">0.732</td>
-    <td class="tg-c3ow">0.616</td>
-    <td class="tg-c3ow">0.620</td>
-    <td class="tg-c3ow">0.706</td>
-    <td class="tg-c3ow">0.517</td>
-    <td class="tg-c3ow">0.748</td>
-    <td class="tg-c3ow">0.847</td>
-    <td class="tg-c3ow">0.702</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">AP_50 | AP_75</td>
-    <td class="tg-c3ow">0.910 | 0.829</td>
-    <td class="tg-c3ow">0.860 | 0.809</td>
-    <td class="tg-c3ow">0.828 | 0.723</td>
-    <td class="tg-c3ow">0.786 | 0.690</td>
-    <td class="tg-c3ow">0.857 | 0.768</td>
-    <td class="tg-c3ow">0.705 | 0.588</td>
-    <td class="tg-c3ow">0.876 | 0.813</td>
-    <td class="tg-c3ow">0.957 | 0.920</td>
-    <td class="tg-c3ow">0.821 | 0.791</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.742<br>0.910<br>0.829</td>
+    <td class="tg-c3ow">0.732<br>0.860<br>0.809</td>
+    <td class="tg-c3ow">0.616<br>0.828<br>0.723</td>
+    <td class="tg-c3ow">0.620<br>0.786<br>0.690</td>
+    <td class="tg-c3ow">0.706<br>0.857<br>0.768</td>
+    <td class="tg-c3ow">0.517<br>0.705<br>0.588</td>
+    <td class="tg-c3ow">0.748<br>0.876<br>0.813</td>
+    <td class="tg-c3ow">0.847<br>0.957<br>0.920</td>
+    <td class="tg-c3ow">0.702<br>0.821<br>0.791</td>
   </tr>
   <tr>
     <td class="tg-c3ow">RetinaNet</td>
-    <td class="tg-c3ow">mAP</td>
-    <td class="tg-c3ow">0.770</td>
-    <td class="tg-c3ow">0.743</td>
-    <td class="tg-c3ow">0.654</td>
-    <td class="tg-c3ow">0.664</td>
-    <td class="tg-c3ow">0.737</td>
-    <td class="tg-c3ow">0.587</td>
-    <td class="tg-c3ow">0.828</td>
-    <td class="tg-c3ow">0.851</td>
-    <td class="tg-c3ow">0.804</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">AP_50 | AP_75</td>
-    <td class="tg-c3ow">0.922 | 0.843</td>
-    <td class="tg-c3ow">0.861 | 0.804</td>
-    <td class="tg-c3ow">0.811 | 0.730</td>
-    <td class="tg-c3ow">0.830 | 0.720</td>
-    <td class="tg-c3ow">0.888 | 0.791</td>
-    <td class="tg-c3ow">0.752 | 0.647</td>
-    <td class="tg-c3ow">0.932 | 0.901</td>
-    <td class="tg-c3ow">0.960 | 0.918</td>
-    <td class="tg-c3ow">0.915 | 0.875</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.770<br>0.922<br>0.843</td>
+    <td class="tg-c3ow">0.743<br>0.861<br>0.804</td>
+    <td class="tg-c3ow">0.654<br>0.811<br>0.730</td>
+    <td class="tg-c3ow">0.664<br>0.830<br>0.720</td>
+    <td class="tg-c3ow">0.737<br>0.888<br>0.791</td>
+    <td class="tg-c3ow">0.587<br>0.752<br>0.647</td>
+    <td class="tg-c3ow">0.828<br>0.932<br>0.901</td>
+    <td class="tg-c3ow">0.851<br>0.960<br>0.918</td>
+    <td class="tg-c3ow">0.804<br>0.915<br>0.875</td>
   </tr>
   <tr>
     <td class="tg-c3ow">YOLOv3</td>
-    <td class="tg-c3ow">mAP</td>
-    <td class="tg-c3ow">0.610</td>
-    <td class="tg-c3ow">0.510</td>
-    <td class="tg-c3ow">0.284</td>
-    <td class="tg-c3ow">0.416</td>
-    <td class="tg-c3ow">0.537</td>
-    <td class="tg-c3ow">0.282</td>
-    <td class="tg-c3ow">0.610</td>
-    <td class="tg-c3ow">0.664</td>
-    <td class="tg-c3ow">0.671</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">AP_50 | AP_75</td>
-    <td class="tg-c3ow">0.817 | 0.689</td>
-    <td class="tg-c3ow">0.664 | 0.600</td>
-    <td class="tg-c3ow">0.400 | 0.336</td>
-    <td class="tg-c3ow">0.578 | 0.468</td>
-    <td class="tg-c3ow">0.759 | 0.632</td>
-    <td class="tg-c3ow">0.421 | 0.315</td>
-    <td class="tg-c3ow">0.817 | 0.689</td>
-    <td class="tg-c3ow">0.824 | 0.784</td>
-    <td class="tg-c3ow">0.831 | 0.790</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.610<br>0.817<br>0.689</td>
+    <td class="tg-c3ow">0.510<br>0.664<br>0.600</td>
+    <td class="tg-c3ow">0.284<br>0.400<br>0.336</td>
+    <td class="tg-c3ow">0.416<br>0.578<br>0.468</td>
+    <td class="tg-c3ow">0.537<br>0.759<br>0.632</td>
+    <td class="tg-c3ow">0.282<br>0.421<br>0.315</td>
+    <td class="tg-c3ow">0.610<br>0.817<br>0.689</td>
+    <td class="tg-c3ow">0.664<br>0.824<br>0.784</td>
+    <td class="tg-c3ow">0.671<br>0.831<br>0.790</td>
   </tr>
   <tr>
     <td class="tg-c3ow">YOLOv5</td>
-    <td class="tg-c3ow">mAP</td>
-    <td class="tg-c3ow">0.669</td>
-    <td class="tg-c3ow">0.671</td>
-    <td class="tg-c3ow">0.226</td>
-    <td class="tg-c3ow">0.398</td>
-    <td class="tg-c3ow">0.692</td>
-    <td class="tg-c3ow">0.209</td>
-    <td class="tg-c3ow">0.675</td>
-    <td class="tg-c3ow">0.802</td>
-    <td class="tg-c3ow">0.606</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow">AP_50 | AP_75</td>
-    <td class="tg-c3ow">0.783 | 0.729</td>
-    <td class="tg-c3ow">0.745 | 0.719</td>
-    <td class="tg-c3ow">0.335 | 0.266</td>
-    <td class="tg-c3ow">0.465 | 0.428</td>
-    <td class="tg-c3ow">0.776 | 0.727</td>
-    <td class="tg-c3ow">0.335 | 0.266</td>
-    <td class="tg-c3ow">0.743 | 0.727</td>
-    <td class="tg-c3ow">0.848 | 0.836</td>
-    <td class="tg-c3ow">0.707 | 0.679</td>
+    <td class="tg-c3ow">mAP<br>AP_50<br>AP_75</td>
+    <td class="tg-c3ow">0.669<br>0.783<br>0.729</td>
+    <td class="tg-c3ow">0.671<br>0.745<br>0.719</td>
+    <td class="tg-c3ow">0.226<br>0.335<br>0.266</td>
+    <td class="tg-c3ow">0.398<br>0.465<br>0.428</td>
+    <td class="tg-c3ow">0.692<br>0.776<br>0.727</td>
+    <td class="tg-c3ow">0.209<br>0.335<br>0.266</td>
+    <td class="tg-c3ow">0.675<br>0.743<br>0.727</td>
+    <td class="tg-c3ow">0.802<br>0.848<br>0.836</td>
+    <td class="tg-c3ow">0.606<br>0.707<br>0.679</td>
   </tr>
 </tbody>
 </table>
-
 
 ## Contributing
 This repository is copyrighted under GPLv3 license 
