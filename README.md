@@ -36,7 +36,7 @@ Then, run this command
 ```
 python voc2coco.py --ann_dir /<Directory you downloded VFP290K>/VFP290K/<target_domain>/<task> --ann_ids /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<tast>.txt --labels /<Directory you downloded VFP290K>/VFP290K/labels.txt --output /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
 ```
-ex) ```python voc2coco.py --ann_dir /media/data1/nips-experiment/low/test --ann_ids /media/data1/nips-experiment/annotations/low_test.txt --labels /media/data1/nips-experiment/labels.txt --output /media/data1/nips-experiment/annotations/low_test.json --ext xml```
+ex) ```python voc2coco.py --ann_dir /media/data1/VFP290K/low/test --ann_ids /media/data1/VFP290K/annotations/low_test.txt --labels /media/data1/VFP290K/labels.txt --output /media/data1/VFP290K/annotations/low_test.json --ext xml```
 
 #### 5. Running Benchmark or desired experiment
 We prepare all config files in 'VFP290K/configs/'.
