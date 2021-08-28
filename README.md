@@ -82,7 +82,10 @@ Since, most of our experiments is based on MMDetection. We do not attach complet
 You can make own python environment via official website.
 Instead, we offer to you all configuration which can reproduce the performance.
 
-#### 1. Reorganize the dataset to follow the YOLO style format.
+#### 1. Prepare all directories for training and inference
+Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
+
+#### 2. Reorganize the dataset to follow the YOLO style format.
 Different with MMDetection style, we have to reformat our labels into YOLO style.
 
 YOLO style label format  
@@ -95,7 +98,7 @@ Only thing you have to do is change two parameters. (`nips_experiment`, `target_
 `nips_experiment` parameter should be indicated our dataset folder such as `/VFP290K/street`
 `target_xml` means label folder which contains labels mady by `labelImg` program.
     
-#### 2. Change the configuration.
+#### 3. Change the configuration.
 For convinience, we also offer some configurations for reproducing the performance indicated the paper.
 But, you have to switch a directory which indicates data folder made by using the `data_refactoring.py`. 
 For example,
@@ -104,7 +107,7 @@ train: /media/data1/nips-experiment/experiments/night_train_sample/images
 val: /media/data1/nips-experiment/experiments/night_val_sample/images
 ```
 
-#### 3. Training.
+#### 4. Training.
 Training process is exactly same with official code.
 Let me give an example.
 ```
@@ -112,7 +115,7 @@ python train.py --img-size 640 --epochs 100 --data ./config/night_night_nocar.ya
 ```
 You can train your model by using this script.
     
-#### 4. Testing.
+#### 5. Testing.
 Along with the training, test process is also needed to evaluate our model.
 ```
 python test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
