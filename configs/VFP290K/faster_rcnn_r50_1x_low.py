@@ -108,7 +108,7 @@ model = dict(
     ))
 
 dataset_type = 'CocoDataset'
-data_root = '/VFP290K' # root path of the dataset folder
+data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 
 
 img_norm_cfg = dict(
