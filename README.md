@@ -8,6 +8,7 @@ This repository is the official documentation & implementation of [VFP290K: A La
 
 Our pretrained models except YOLO are based on [MMdetection2](https://github.com/open-mmlab/mmdetection) detection framework. You can donwload coco-pretrained models for the transfer learning.
 
+## MMdetection-based models
 #### 1. Install mmcv-full
 ```setup
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
@@ -21,13 +22,11 @@ cd VFP290K-main
 pip install -r requirements/build.txt
 pip install -v -e .
 ```
-- 모델 구동 환경 설명
 
-## Preprocessing
+#### 2. Prepare all directories for training and inference
+Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
 
-### 1. 실험 폴더로 split하는거 (재주님)
-디렉토리 구조 설명 & split 코드 설명
-### 2. Generate coco format annotation files
+#### 3. Generate coco format annotation files
 To train models, you should generate coco format annotation files. 
 Move labels.txt file to VFP290K dataset folder.
 Execute make_anno_list_for_voc2coco.ipynb file. You should change values named target_domain and task.
@@ -37,9 +36,8 @@ python voc2coco.py --ann_dir /media/data1/VFP290K/<target_domain>/<task> --ann_i
 ```
 ex) python voc2coco.py --ann_dir /media/data1/nips-experiment/low/test --ann_ids /media/data1/nips-experiment/annotations/low_test.txt --labels /media/data1/nips-experiment/labels.txt --output /media/data1/nips-experiment/annotations/low_test.json --ext xml
 
-## Training & Evaluation
-
-### 1. Benchmark
+#### 4. Running Benchmark or desired experiment
+We prepare all config files in 'VFP290K/configs/'.
 To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
     ```train
@@ -62,39 +60,10 @@ To train and evaluate the model(s) in the paper, run this command:
     <weight> is the path of the trained model weight.\
     ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py work_dirs/faster_rcnn_r50_1x_benchmark/latest.pth --eval bbox --gpu-ids 1
 
-### 2. Experimental setting (Ablation study for various features)
-To train the model(s) based on experimenta setting to demonstrate the perfomance shift in the paper Table.4, run this command:
-
-- Light conditions
-```train
-bash ./tools/dist_train.sh configs/VFP290K/faster_rcnn_r50_1x_benchmark.py 4 
-```
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
-- Camera heights
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
-- Background
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
 
 ## Pre-trained Models
 You can download pretrained models here:
 - [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
-- Pre-trained 모델 넣을지 말지 고민중
 
 
 ## Results
