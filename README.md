@@ -77,6 +77,11 @@ To train and evaluate the model(s) in the paper, run this command:
     ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py work_dirs/faster_rcnn_r50_1x_benchmark/latest.pth --eval bbox --gpu-ids 1
 
 ## YOLOv5
+
+*** We will update YOLOv5 configuration ASAP ***
+        - below is example explanation for our experiments
+        
+        
 To evaluate YOLOv5 performance with respect to VFP290K dataset, we follow the official code.  [YOLOV5](https://github.com/ultralytics/yolov5)
 Since, most of our experiments is based on MMDetection. We do not attach completed codes in this repository.
 You can make own python environment via official website.
