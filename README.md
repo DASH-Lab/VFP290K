@@ -82,7 +82,7 @@ Since, most of our experiments is based on MMDetection. We do not attach complet
 You can make own python environment via official website.
 Instead, we offer to you all configuration which can reproduce the performance.
 
-#### 1. Reorganize the dataset which follows YOLO style format.
+#### 1. Reorganize the dataset to follow the YOLO style format.
 Different with MMDetection style, we have to reformat our labels into YOLO style.
 
 YOLO style label format  
