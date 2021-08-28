@@ -61,7 +61,7 @@ model = dict(
         nms=dict(type='nms', iou_threshold=0.45),
         max_per_img=100))
 dataset_type = 'CocoDataset'
-data_root = '/VFP290K' # root path of the dataset folder
+data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 img_norm_cfg = dict(mean=[0, 0, 0], std=[255.0, 255.0, 255.0], to_rgb=True)
 train_pipeline = [
     dict(type='LoadImageFromFile', to_float32=True),
