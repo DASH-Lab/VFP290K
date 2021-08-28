@@ -95,7 +95,7 @@ YOLO style label format
 ```
 You can transform our data to YOLO style data by utilizing `configs/data_refactoring.py`
 Only thing you have to do is change two parameters. (`nips_experiment`, `target_xml`)
-`nips_experiment` parameter should be indicated our dataset folder such as `/VFP290K/street`
+`nips_experiment` parameter should be indicated our dataset folder such as `/VFP290K/yolov5/street`
 `target_xml` means label folder which contains labels mady by `labelImg` program.
     
 #### 3. Change the configuration.
