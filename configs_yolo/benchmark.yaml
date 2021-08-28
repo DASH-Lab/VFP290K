@@ -1,0 +1,24 @@
+# COCO 2017 dataset http://cocodataset.org
+# Train command: python train.py --data coco.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent_folder
+#     /coco
+#     /yolov5
+
+
+# download command/URL (optional)
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: /media/data1/nips-experiment/experiments/benchmark_train_sample/images  # 118287 images
+val: /media/data1/nips-experiment/experiments/benchmark_val_sample/images  # 5000 images
+#test: /media/data1/nips-experiment/experiments/street_test/images  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+# number of classes
+nc: 2
+names: ['normal', 'swoon']
+# class names
+# Print classes
+# with open('data/coco.yaml') as f:
+#   d = yaml.safe_load(f)  # dict
+#   for i, x in enumerate(d['names']):
+#     print(i, x)
