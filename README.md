@@ -341,6 +341,5 @@ Our model achieves the following performance on light conditions and camera heig
 </tbody>
 </table>
 
-
 ## Contributing
 This repository is copyrighted under GPLv3 license 
