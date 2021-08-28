@@ -51,7 +51,7 @@ def xml_to_string(xml_path):
 
 
 target_xml = 'clean_xml' # xml folder name containes label made by 'labelImg'
-nips_experiment = '/media/data1/nips-experiment' # data root path
+nips_experiment = '/VFP290K/yolov5/' # data root path
 training_condition_path = os.path.join(nips_experiment, 'benchmark/train')
 validation_condition_path = os.path.join(nips_experiment, 'benchmark/val')
 testing_condition_path = os.path.join(nips_experiment, 'benchmark/test')
