@@ -29,14 +29,14 @@ pip install -v -e .
 Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
 
 #### 4. Generate coco format annotation files
-To train models, you should generate coco format annotation files. 
-Move labels.txt file to VFP290K dataset folder.
-Execute make_anno_list_for_voc2coco.ipynb file. You should change values named target_domain and task.
+To train models, you should generate coco format annotation files.  
+Move labels.txt file to VFP290K dataset folder.  
+Execute make_anno_list_for_voc2coco.ipynb file. You should change values named target_domain and task.  
 Then, run this command
 ```
-python voc2coco.py --ann_dir /media/data1/VFP290K/<target_domain>/<task> --ann_ids /media/data1/VFP290K/annotations/<target_domain>_<tast>.txt --labels /media/data1/VFP290K/labels.txt --output /media/data1/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
+python voc2coco.py --ann_dir /<Directory you downloded VFP290K>/VFP290K/<target_domain>/<task> --ann_ids /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<tast>.txt --labels /<Directory you downloded VFP290K>/VFP290K/labels.txt --output /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<tast>.json --ext xml
 ```
-ex) python voc2coco.py --ann_dir /media/data1/nips-experiment/low/test --ann_ids /media/data1/nips-experiment/annotations/low_test.txt --labels /media/data1/nips-experiment/labels.txt --output /media/data1/nips-experiment/annotations/low_test.json --ext xml
+ex) ```python voc2coco.py --ann_dir /media/data1/nips-experiment/low/test --ann_ids /media/data1/nips-experiment/annotations/low_test.txt --labels /media/data1/nips-experiment/labels.txt --output /media/data1/nips-experiment/annotations/low_test.json --ext xml```
 
 #### 5. Running Benchmark or desired experiment
 We prepare all config files in 'VFP290K/configs/'.
