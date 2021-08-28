@@ -140,7 +140,7 @@ Our model achieves the following performance on benchmark:
     <td class="tg-c3ow">0.868</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">AP_75}</td>
+    <td class="tg-c3ow">AP_75</td>
     <td class="tg-c3ow">0.799</td>
     <td class="tg-c3ow">0.811</td>
     <td class="tg-c3ow">0.797</td>
