@@ -86,7 +86,7 @@ Instead, we offer to you all configuration which can reproduce the performance.
 Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
 
 #### 2. Reorganize the dataset to follow the YOLO style format.
-Different with MMDetection style, we have to reformat our labels into YOLO style.
+Different with MMDetection style, we need to reformat our labels into YOLO style.
 
 YOLO style label format  
 ```..._label_00001.txt
@@ -94,9 +94,9 @@ YOLO style label format
     
 ```
 You can transform our data to YOLO style data by utilizing `configs/data_refactoring.py`
-Only thing you have to do is change two parameters. (`nips_experiment`, `target_xml`)
-`nips_experiment` parameter should be indicated our dataset folder such as `/VFP290K/yolov5/street`
-`target_xml` means label folder which contains labels mady by `labelImg` program.
+We need to change two parameters. (`nips_experiment`, `target_xml`).  
+`nips_experiment` parameter need to be set as our dataset folder, such as `/VFP290K/yolov5/street`
+`target_xml` means label folder for specific experiment, such as 'clean_xml'.
     
 #### 3. Change the configuration.
 For convinience, we also offer some configurations for reproducing the performance indicated the paper.
