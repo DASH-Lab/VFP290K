@@ -20,7 +20,7 @@ Please replace `{cu_version}` and `{torch_version}` in the url to your desired o
 #### 2. clone VFP290K repository
 ```setup
 git clone https://github.com/DASH-Lab/VFP290K.git
-cd VFP290K-main
+cd VFP290K
 pip install -r requirements/build.txt
 pip install -v -e .
 ```
