@@ -82,9 +82,7 @@ To train and evaluate the model(s) in the paper, run this command:
         
         
 ## Pre-trained Models
-You can download pretrained models here:
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
+You can download all the pretrained models [here](https://drive.google.com/drive/folders/1HT8z-iF3jJRsD4uvfDDKLEExE7N0MqrV)
 
 ## Results
 Our model achieves the following performance on benchmark:
