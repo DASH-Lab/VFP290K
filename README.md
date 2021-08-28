@@ -55,7 +55,7 @@ ex)
 #### 5. Download the checkpoints files
 You can find checkpoints files in [the official repository](https://github.com/open-mmlab/mmdetection/blob/master/docs/model_zoo.md)
 
-#### 5. Running Benchmark or desired experiment
+#### 6. Running Benchmark or desired experiment
 We prepare all config files in 'VFP290K/configs/'.
 To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
