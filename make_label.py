@@ -32,15 +32,15 @@ def make_folders_by_target(base_path, json_file, key):
     os.makedirs(opj(base_path, key), exist_ok=True)
     for each_video in tqdm(json_file[key]['train'], total=len(json_file[key]['train'])):
         shutil.copytree(f'{base_path}/VFP290K/{each_video}', f'{base_path}/{key}/train/{each_video}')
-        break
+        
         
     for each_video in tqdm(json_file[key]['val'], total=len(json_file[key]['val'])):
         shutil.copytree(f'{base_path}/VFP290K/{each_video}', f'{base_path}/{key}/val/{each_video}')
-        break
+        
         
     for each_video in tqdm(json_file[key]['test'], total=len(json_file[key]['test'])):
         shutil.copytree(f'{base_path}/VFP290K/{each_video}', f'{base_path}/{key}/test/{each_video}')
-        break
+        
         
 def make_folders_for_yolov5(base_path, json_file, key):
     """
@@ -60,7 +60,7 @@ def make_folders_for_yolov5(base_path, json_file, key):
             
             shutil.copy(each_image_file, f'{base_path}/yolov5/{key}/train/image/')
             shutil.copy(each_xml_file, f'{base_path}/yolov5/{key}/train/label/')
-        break
+        
         
     for each_video in tqdm(json_file[key]['val'], total=len(json_file[key]['val'])):
         for each_image_file, each_xml_file in zip(img_dict[each_video], xml_dict[each_video]):    
@@ -69,7 +69,7 @@ def make_folders_for_yolov5(base_path, json_file, key):
             
             shutil.copy(each_image_file, f'{base_path}/yolov5/{key}/val/image/')
             shutil.copy(each_xml_file, f'{base_path}/yolov5/{key}/val/label/')
-        break
+        
         
     for each_video in tqdm(json_file[key]['test'], total=len(json_file[key]['test'])):
         for each_image_file, each_xml_file in zip(img_dict[each_video], xml_dict[each_video]):
@@ -78,7 +78,7 @@ def make_folders_for_yolov5(base_path, json_file, key):
             
             shutil.copy(each_image_file, f'{base_path}/yolov5/{key}/test/image/')
             shutil.copy(each_xml_file, f'{base_path}/yolov5/{key}/test/label/')
-        break
+        
 
 def generate_for_coco(vfp_dir, target, task):
     rootpath = opj(vfp_dir, target, task) + '/'
