@@ -15,7 +15,7 @@ CUDA=11.1
 
 ## MMdetection-based models
 #### 1. Install Pytorch
-We use pytorch=1.7.1 from this [link](https://pytorch.org/get-started/previous-versions/).
+We use pytorch=1.9.1 from this [link](https://pytorch.org/get-started/locally/).
 
 #### 2. Install mmcv-full
 ```setup
