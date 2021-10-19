@@ -11,13 +11,16 @@ Our pretrained models except YOLO are based on [MMdetection2](https://github.com
 Download our VFP290K dataset in here: [VFP290K](https://sites.google.com/view/dash-vfp300k/download).
 
 ## MMdetection-based models
-#### 1. Install mmcv-full
+#### 1. Install Pytorch
+We use pytorch=1.7.1 from this [link](https://pytorch.org/get-started/previous-versions/).
+
+#### 2. Install mmcv-full
 ```setup
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
 ```
 Please replace `{cu_version}` and `{torch_version}` in the url to your desired one.
 
-#### 2. clone VFP290K repository
+#### 3. Clone and complete setup from VFP290K repository
 ```setup
 git clone https://github.com/DASH-Lab/VFP290K.git
 cd VFP290K
@@ -25,37 +28,15 @@ pip install -r requirements/build.txt
 pip install -v -e .
 ```
 
-#### 3. Prepare all directories for training and inference
-Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
-
-#### 4. Generate coco format annotation files
-To train models, you should generate coco format annotation files.  
-Move labels.txt file to VFP290K dataset folder.  
-Execute make_anno_list_for_voc2coco.ipynb file.
-
-You should change 
-- target_domain -> day/night/low/high/street/park/building/benchmark.
-- task -> train/val/test.
-    
-Then, run this command
+#### 3. Prepare all preprocessed data for training and inference.
+```bash
+python make_label.py --data_root_dir <VFP directory>
 ```
-python voc2coco.py --ann_dir /<Directory you downloded VFP290K>/VFP290K/<target_domain>/<task>\
-    --ann_ids /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<task>.txt\
-    --labels /<Directory you downloded VFP290K>/VFP290K/labels.txt\
-    --output /<Directory you downloded VFP290K>/VFP290K/annotations/<target_domain>_<task>.json\
-    --ext xml
-```
-ex)
-    ```python voc2coco.py --ann_dir /media/data1/VFP290K/low/test\
-    --ann_ids /media/data1/VFP290K/annotations/low_test.txt\
-    --labels /media/data1/VFP290K/labels.txt\
-    --output /media/data1/VFP290K/annotations/low_test.json\
-    --ext xml```
-    
-#### 5. Download the checkpoints files
+
+#### 4. Download the checkpoints files
 You can find checkpoints files in [the official repository](https://github.com/open-mmlab/mmdetection/blob/master/docs/model_zoo.md)
 
-#### 6. Running Benchmark or desired experiment
+#### 5. Running Benchmark or desired experiment
 We prepare all config files in 'VFP290K/configs/'.
 To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
