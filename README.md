@@ -21,7 +21,7 @@ We use pytorch=1.9.1 from this [link](https://pytorch.org/get-started/locally/).
 ```setup
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
 ```
-Please replace `{cu_version}` and `{torch_version}` in the url to your desired one.
+Please replace `{cu_version}` and `{torch_version}` in the url to your desired one.\
 e.g. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.9.1/index.html
 
 #### 3. Clone and complete setup from VFP290K repository
