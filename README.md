@@ -17,19 +17,10 @@ CUDA=11.1
 #### 1. Install Pytorch
 We use pytorch=1.9.1 from this [link](https://pytorch.org/get-started/locally/).
 
-#### 2. Install mmcv-full
+#### 2. Install MMDetection
 ```setup
-pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
-```
-Please replace `{cu_version}` and `{torch_version}` in the url to your desired one.\
-e.g. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.9.1/index.html
-
-#### 3. Clone and complete setup from VFP290K repository
-```setup
-git clone https://github.com/DASH-Lab/VFP290K.git
-cd VFP290K
-pip install -r requirements/build.txt
-pip install -v -e .
+pip install openmim
+mim install mmdet
 ```
 
 #### 3. Prepare all preprocessed data for training and inference.
@@ -39,6 +30,7 @@ python make_label.py --data_root_dir <VFP directory>
 
 #### 4. Download the checkpoints files
 You can find checkpoints files in [the official repository](https://github.com/open-mmlab/mmdetection/blob/master/docs/model_zoo.md)
+and put them into ./checkpoints
 
 #### 5. Running Benchmark or desired experiment
 We prepare all config files in 'VFP290K/configs/'.
