@@ -64,8 +64,8 @@ To train and evaluate the model(s) in the paper, run this command:
 
 ## YOLOv5
 #### 1. Change the configuration.
-E.g) ./yolov5/configs/benchmark.yaml:
-        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image
+E.g) ./yolov5/configs/benchmark.yaml\
+        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image\
         val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
         
 #### 2. Training.
