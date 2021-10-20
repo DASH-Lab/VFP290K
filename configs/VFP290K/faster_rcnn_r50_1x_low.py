@@ -109,7 +109,7 @@ model = dict(
     ))
 
 dataset_type = 'CocoDataset'
-classes= "/home/jeonghokim/data/labels.txt"
+classes= "/<YOUR labesl.txt DIRECTORY>"
 data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 
 

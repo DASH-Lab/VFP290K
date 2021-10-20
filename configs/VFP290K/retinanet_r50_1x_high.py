@@ -62,7 +62,7 @@ model = dict(
 
 
 dataset_type = 'CocoDataset'
-classes= "/home/jeonghokim/data/labels.txt"
+classes= "/<YOUR labesl.txt DIRECTORY>"
 data_root = '/home/jeonghokim/data/VFP290K' # root path of the dataset folder
 
 img_norm_cfg = dict(

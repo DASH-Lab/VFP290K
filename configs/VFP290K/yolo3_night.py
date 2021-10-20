@@ -61,7 +61,7 @@ model = dict(
         nms=dict(type='nms', iou_threshold=0.45),
         max_per_img=100))
 dataset_type = 'CocoDataset'
-classes= "/home/jeonghokim/data/labels.txt"
+classes= "/<YOUR labesl.txt DIRECTORY>"
 data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 img_norm_cfg = dict(mean=[0, 0, 0], std=[255.0, 255.0, 255.0], to_rgb=True)
 train_pipeline = [
