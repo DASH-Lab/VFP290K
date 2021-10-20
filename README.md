@@ -13,7 +13,7 @@ Download our VFP290K dataset in here: [VFP290K](https://sites.google.com/view/da
 ## Environments
 CUDA==11.1\
 python==3.7\
-CUDNN==7.6.5\
+CUDNN==7.6.5
 
 ## MMdetection-based models
 #### 1. Install Pytorch
