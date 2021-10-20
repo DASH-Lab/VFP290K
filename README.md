@@ -11,7 +11,9 @@ Our pretrained models except YOLO are based on [MMdetection2](https://github.com
 Download our VFP290K dataset in here: [VFP290K](https://sites.google.com/view/dash-vfp300k/download).
 
 ## Environments
-CUDA=11.1
+CUDA==11.1
+python==3.7
+CUDNN==7.6.5
 
 ## MMdetection-based models
 #### 1. Install Pytorch
