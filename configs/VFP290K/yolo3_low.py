@@ -61,6 +61,7 @@ model = dict(
         nms=dict(type='nms', iou_threshold=0.45),
         max_per_img=100))
 dataset_type = 'CocoDataset'
+classes= "/home/jeonghokim/data/labels.txt"
 data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 img_norm_cfg = dict(mean=[0, 0, 0], std=[255.0, 255.0, 255.0], to_rgb=True)
 train_pipeline = [
@@ -107,6 +108,7 @@ data = dict(
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
+        classes=classes,
         ann_file= data_root + '/annotations/low_train.json',
         img_prefix= data_root + '/low/train',
         pipeline=[
@@ -136,6 +138,7 @@ data = dict(
         ]),
     val=dict(
         type=dataset_type,
+        classes=classes,
         ann_file= data_root + '/annotations/low_val.json',
         img_prefix= data_root + '/low/val',
         pipeline=[
@@ -159,6 +162,7 @@ data = dict(
         ]),
     test=dict(
         type=dataset_type,
+        classes=classes,
         ann_file= data_root + '/annotations/low_test.json',
         img_prefix= data_root + '/low/test',
         pipeline=[

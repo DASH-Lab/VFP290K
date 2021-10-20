@@ -62,7 +62,7 @@ model = dict(
 
 
 dataset_type = 'CocoDataset'
-
+classes= "/home/jeonghokim/data/labels.txt"
 data_root = '/<YOUR DIRECTORY>' # root path of the dataset folder
 
 img_norm_cfg = dict(
@@ -99,16 +99,19 @@ data = dict(
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + '/annotations/low_train.json',
         img_prefix=data_root + '/low/train',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + '/annotations/low_val.json',
         img_prefix=data_root + '/low/val',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + '/annotations/low_test.json',
         img_prefix=data_root + '/low/test',
         pipeline=test_pipeline))
