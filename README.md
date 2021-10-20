@@ -63,37 +63,12 @@ To train and evaluate the model(s) in the paper, run this command:
     ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py work_dirs/faster_rcnn_r50_1x_benchmark/latest.pth --eval bbox --gpu-ids 1
 
 ## YOLOv5
-
-*** We will update YOLOv5 configuration ASAP ***
-        - below is example explanation for our experiments
-        
-        
-To evaluate YOLOv5 performance with respect to VFP290K dataset, we follow the official code.  [YOLOV5](https://github.com/ultralytics/yolov5)
-Since, most of our experiments is based on MMDetection. We do not attach completed codes in this repository.
-You can make own python environment via official website.
-Instead, we offer to you all configuration which can reproduce the performance.
-
-#### 1. Prepare all directories for training and inference
-Please follow and run the '[preprocessing] Preparing Training Folder.ipynb'
-
-#### 2. Reorganize the dataset to follow the YOLO style format.
-Different with MMDetection style, we need to reformat our labels into YOLO style.
-
-YOLO style label format  
-```..._label_00001.txt
-<Classification label> <X> <Y> <W> <H>
-    
-```
-You can transform our data to YOLO style data by utilizing `configs/data_refactoring.py`
-We need to change two parameters. (`nips_experiment`, `target_xml`).  
-`nips_experiment` parameter need to be set as our dataset folder, such as `/VFP290K/yolov5/street`
-`target_xml` means label folder for specific experiment, such as 'clean_xml'.
-    
-#### 3. Change the configuration.
+#### 1. Change the configuration.
 For convinience, we also offer some configurations for reproducing the performance indicated the paper.
 But, you have to switch a directory which indicates data folder made by using the `data_refactoring.py`. 
 For example,
-```night_night_nocar.yaml
+```benchmark.yaml
+
 train: /media/data1/nips-experiment/experiments/night_train_sample/images
 val: /media/data1/nips-experiment/experiments/night_val_sample/images
 ```
