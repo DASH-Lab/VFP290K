@@ -33,10 +33,13 @@ python make_label.py --data_root_dir <VFP directory>
 
 #### 4. Download the checkpoints files
 You can find checkpoints files in [the official repository](https://github.com/open-mmlab/mmdetection/blob/master/docs/model_zoo.md)
-and put them into ./checkpoints
+and **put them into ./checkpoints**
 
-#### 5. Running Benchmark or desired experiment
-We prepare all config files in 'configs/VFP290K/'.
+#### 5. Set a config file. 
+We prepare all config files used in our experiments in "configs/VFP290K".
+Set your labels.txt and VFP290K data root directory. (classes= "/<YOUR labesl.txt DIRECTORY>", data_root = "/<YOUR DIRECTORY>")
+    
+#### 6. Running Benchmark or desired experiment
 To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
     ```train
