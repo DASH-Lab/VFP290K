@@ -36,7 +36,7 @@ You can find checkpoints files in [the official repository](https://github.com/o
 and **put them into ./checkpoints**
 
 #### 5. Set a config file. 
-We prepare all config files used in our experiments in "configs/VFP290K".
+We prepare all config files used in our experiments in "configs/VFP290K".\
 Set your labels.txt and VFP290K data root directory. (classes= "\<YOUR labesl.txt DIRECTORY\>", data_root = "\<YOUR DATA DIRECTORY\>")
     
 #### 6. Running Benchmark or desired experiment
