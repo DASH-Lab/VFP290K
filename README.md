@@ -64,27 +64,22 @@ To train and evaluate the model(s) in the paper, run this command:
 
 ## YOLOv5
 #### 1. Change the configuration.
-For convinience, we also offer some configurations for reproducing the performance indicated the paper.
-But, you have to switch a directory which indicates data folder made by using the `data_refactoring.py`. 
-For example,
-```benchmark.yaml
-
-train: /media/data1/nips-experiment/experiments/night_train_sample/images
-val: /media/data1/nips-experiment/experiments/night_val_sample/images
-```
-
-#### 4. Training.
+E.g) ./yolov5/configs/benchmark.yaml:
+        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image
+        val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
+        
+#### 2. Training.
 Training process is exactly same with official code.
 Let me give an example.
 ```
-python train.py --img-size 640 --epochs 100 --data ./config/night_night_nocar.yaml --batch-size 48 --cfg ./models/yolov5x.yaml --device 0,1 --workers 8 
+python yolov5/train.py --img-size 640 --epochs 100 --data yolov5/configs/benchmark.yaml --batch-size 48 --cfg ./models/yolov5x.yaml --device 0,1 --workers 8 
 ```
 You can train your model by using this script.
     
 #### 5. Testing.
 Along with the training, test process is also needed to evaluate our model.
 ```
-python test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
+python yolov5/test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data yolov5/data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
 ```        
         
         
