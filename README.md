@@ -37,7 +37,7 @@ and **put them into ./checkpoints**
 
 #### 5. Set a config file. 
 We prepare all config files used in our experiments in "configs/VFP290K".
-Set your labels.txt and VFP290K data root directory. (classes= "<YOUR labesl.txt DIRECTORY>", data_root = "<YOUR DATA DIRECTORY>")
+Set your labels.txt and VFP290K data root directory. (classes= "\<YOUR labesl.txt DIRECTORY\>", data_root = "\<YOUR DATA DIRECTORY\>")
     
 #### 6. Running Benchmark or desired experiment
 To train and evaluate the model(s) in the paper, run this command:
