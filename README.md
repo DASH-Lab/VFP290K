@@ -21,6 +21,7 @@ We use pytorch=1.9.1 from this [link](https://pytorch.org/get-started/locally/).
 ```setup
 pip install openmim
 mim install mmdet
+pip install future tensorboard
 ```
 
 #### 3. Prepare all preprocessed data for training and inference.
@@ -33,7 +34,7 @@ You can find checkpoints files in [the official repository](https://github.com/o
 and put them into ./checkpoints
 
 #### 5. Running Benchmark or desired experiment
-We prepare all config files in 'VFP290K/configs/'.
+We prepare all config files in 'configs/VFP290K/'.
 To train and evaluate the model(s) in the paper, run this command:
 - single gpu training
     ```train
