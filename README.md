@@ -1,6 +1,6 @@
 # VFP290K: A Large-Scale Benchmark Dataset for Vision-based Fallen Person Detection
 
-This repository is the official documentation & implementation of [VFP290K: A Large-Scale Benchmark Datasetfor Vision-based Fallen Person Detection](https://openreview.net/forum?id=y2AbfIXgBK3). 
+This repository is the official documentation & implementation of [VFP290K: A Large-Scale Benchmark Dataset for Vision-based Fallen Person Detection](https://openreview.net/forum?id=y2AbfIXgBK3). 
 
 ![VFP290K](./images/teaser.png)
 
