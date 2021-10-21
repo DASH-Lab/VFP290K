@@ -1,0 +1,4 @@
+munch
+tqdm 
+future tensorboard
+xmltodict
