@@ -1,3 +1,4 @@
 munch
 tqdm
 xmltodict
+seaborn
