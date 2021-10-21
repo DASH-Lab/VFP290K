@@ -10,8 +10,8 @@
 download: bash data/scripts/get_coco.sh
 
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: /media/data1/nips-experiment/experiments/high_train_sample/images  # 118287 images
-val: /media/data1/nips-experiment/experiments/high_val_sample/images  # 5000 images
+train: <TRAINING YOLO IMAGE DIRECTORY>
+val: <VALIDATION YOLO IMAGE DIRECTORY>
 # test: ../coco/test-dev2017.txt  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
 
 # number of classes
