@@ -70,7 +70,7 @@ python data_refactoring.py --data_root_dir <{YOUR DATA ROOT DIRECTORY}/yolov5>
 
 #### 2. Change the configuration.
 E.g) ./yolov5/configs/benchmark.yaml\
-        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image
+        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image\
         val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
         
 #### 2. Training.
