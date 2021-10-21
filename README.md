@@ -63,9 +63,14 @@ To train and evaluate the model(s) in the paper, run this command:
     ex) python tools/test.py configs/VFP290K/faster_rcnn_r50_1x_benchmark.py work_dirs/faster_rcnn_r50_1x_benchmark/latest.pth --eval bbox --gpu-ids 1
 
 ## YOLOv5
-#### 1. Change the configuration.
+#### 1. Generate .txt files for yolo.
+```bash
+python data_refactoring.py --data_root_dir <{YOUR DATA ROOT DIRECTORY}/yolov5>
+```
+
+#### 2. Change the configuration.
 E.g) ./yolov5/configs/benchmark.yaml\
-        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image\
+        train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image
         val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
         
 #### 2. Training.
