@@ -8,8 +8,8 @@
 
 # download command/URL (optional)
 
-train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image
-val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
+train: <TRAINING YOLO IMAGE DIRECTORY>
+val: <VALIDATION YOLO IMAGE DIRECTORY>
 #test: /media/data1/nips-experiment/experiments/street_test/images  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
 
 # number of classes
