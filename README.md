@@ -17,7 +17,7 @@ CUDNN=7.6.5
 
 ## MMdetection-based models
 #### 1. Install Pytorch
-We use pytorch=1.8.0 from this [link](https://pytorch.org/get-started/locally/).
+We use pytorch=1.8.0 from this [link](https://pytorch.org/get-started/previous-versions/).
 
 #### 2. Install MMDetection
 ```setup
