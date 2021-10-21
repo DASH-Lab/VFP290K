@@ -23,6 +23,7 @@ We use pytorch=1.8.0 from this [link](https://pytorch.org/get-started/previous-v
 ```setup
 pip install openmim
 mim install mmdet
+pip install future tensorboard
 pip install -r requirements
 ```
 
