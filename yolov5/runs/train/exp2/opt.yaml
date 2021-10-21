@@ -1,6 +1,6 @@
 weights: yolov5s.pt
-cfg: ./models/yolov5x.yaml
-data: ./configs_yolo/benchmark.yaml
+cfg: models/yolov5x.yaml
+data: configs/street_street_nocar.yaml
 hyp: data/hyps/hyp.scratch.yaml
 epochs: 100
 batch_size: 8
@@ -14,7 +14,7 @@ evolve: null
 bucket: ''
 cache: null
 image_weights: false
-device: '5'
+device: 4,5
 multi_scale: false
 single_cls: false
 adam: false
