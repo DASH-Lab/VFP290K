@@ -65,7 +65,7 @@ To train and evaluate the model(s) in the paper, run this command:
 ## YOLOv5
 #### 1. Generate .txt files for yolo.
 ```bash
-python data_refactoring.py --data_root_dir <{YOUR DATA ROOT DIRECTORY}/yolov5>
+python data_refactoring.py --data_root_dir \<{YOUR DATA ROOT DIRECTORY}/yolov5\>
 ```
 
 #### 2. Change the configuration.
