@@ -24,7 +24,7 @@ We use pytorch=1.8.0 from this [link](https://pytorch.org/get-started/previous-v
 pip install openmim
 mim install mmdet
 pip install future tensorboard
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 #### 3. Prepare all preprocessed data for training and inference.
