@@ -19,11 +19,11 @@ CUDNN=7.6.5
 #### 1. Install Pytorch
 We use pytorch=1.8.0 from this [link](https://pytorch.org/get-started/previous-versions/).
 
-#### 2. Install MMDetection
+#### 2. Install MMDetection & pkgs
 ```setup
 pip install openmim
 mim install mmdet
-pip install future tensorboard
+pip install -r requirements
 ```
 
 #### 3. Prepare all preprocessed data for training and inference.
