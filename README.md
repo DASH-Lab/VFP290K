@@ -75,8 +75,8 @@ E.g) ./yolov5/configs/benchmark.yaml\
         
 #### 2. Training.
 Training process is exactly same with official code.
-Let me give an example.
-```
+E.g)
+```bash
 python yolov5/train.py --img-size 640 --epochs 100 --data yolov5/configs/benchmark.yaml --batch-size 48 --cfg ./models/yolov5x.yaml --device 0,1 --workers 8 
 ```
 You can train your model by using this script.
