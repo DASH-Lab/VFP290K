@@ -67,11 +67,12 @@ To train and evaluate the model(s) in the paper, run this command:
 ## YOLOv5
 #### 1. Generate .txt files for yolo.
 ```bash
-python data_refactoring.py --data_root_dir <{YOUR DATA ROOT DIRECTORY}/yolov5>
+cd yolov5
+python configs/data_refactoring.py --data_root_dir <{YOUR DATA ROOT DIRECTORY}/yolov5>
 ```
 
 #### 2. Change the configuration.
-E.g) ./yolov5/configs/benchmark.yaml\
+E.g) configs/benchmark.yaml\
         train: /media/data1/VFP290K/VFP290K/yolov5/benchmark/train/image\
         val: /media/data1/VFP290K/VFP290K/yolov5/benchmark/val/image
         
@@ -79,14 +80,14 @@ E.g) ./yolov5/configs/benchmark.yaml\
 Training process is exactly same with official code.
 E.g)
 ```bash
-python yolov5/train.py --img-size 640 --epochs 100 --data yolov5/configs/benchmark.yaml --batch-size 48 --cfg ./models/yolov5x.yaml --device 0,1 --workers 8 
+python train.py --img-size 640 --epochs 100 --data configs/benchmark.yaml --batch-size 48 --cfg ./models/yolov5x.yaml --device 0,1 --workers 8 
 ```
 You can train your model by using this script.
     
 #### 5. Testing.
 Along with the training, test process is also needed to evaluate our model.
 ```
-python yolov5/test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data yolov5/data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
+python test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
 ```        
         
         
