@@ -89,10 +89,6 @@ Along with the training, test process is also needed to evaluate our model.
 ```
 python test.py --weights runs/train/exp<your_exp_num>/weights/best.pt --data data/test.yaml --batch-size 48 --img-size 640 --conf-thres 0.5 --iou-thres 0.5 --device 0,1
 ```        
-        
-        
-## Pre-trained Models
-You can download all the pretrained models [here](https://drive.google.com/drive/folders/1HT8z-iF3jJRsD4uvfDDKLEExE7N0MqrV)
 
 ## Results
 Our model achieves the following performance on benchmark:
